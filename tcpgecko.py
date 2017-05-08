@@ -6,11 +6,20 @@ def enum(**enums):
     return type('Enum', (), enums)
 
 class TCPGecko:
-    def __init__(self, *args):
+    def __init__(self, ip=None):
+        if ip is not None:
+            self.connect(ip)
+        else:
+            self.is_connected = False
+
+    def connect(self, ip):  # IP must be string
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
-        print("Connecting to " + str(args[0]) + ":7331")
-        self.s.connect((str(args[0]), 7331)) #IP, 1337 reversed, Cafiine uses 7332+
-        print("Connected!")
+        self.s.connect((ip, 7331))
+        self.is_connected = True  # Not doing error checking, I'm lazy
+
+    def disconnect(self):
+        self.s.close()
+        self.is_connected = False
 
     def readmem(self, address, length): #Number of bytes
         if length == 0: raise BaseException("Reading memory requires a length (# of bytes)")
