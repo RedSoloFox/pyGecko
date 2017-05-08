@@ -6,14 +6,12 @@ Python library for use with TCPGecko. Requires kernel exploit to use.
 
 tcpgecko.py is the actual library, can use just it in IDLE (only tested on python 2)
 
-octoling.py is a sample script to use it, to swap Inkling model with Octolings in Splatoon and edit money.
-
 common.py is another library to make things easier to work with.
 
-codehandler is in /codehandler, just run make
+**Usage:**
+
+Create a TCPGecko object and either pass and ip in on init, or use the connect() method to connect via an IP in string form.
 
 **Credits:**
 
 Python library: NWPlayer123
-
-TCPGecko codehandler: Chadderz, Marionumber1
