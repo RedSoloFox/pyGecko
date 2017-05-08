@@ -10,7 +10,15 @@ common.py is another library to make things easier to work with.
 
 **Usage:**
 
-Create a TCPGecko object and either pass and ip in on init, or use the connect() method to connect via an IP in string form.
+>from pygecko import TCPGecko
+
+Either:
+
+>my_gecko = TCPGecko()
+
+Or:
+
+>my_gecko = TCPGecko("my.ip.goes.here")  # Auto Connects
 
 **Credits:**
 

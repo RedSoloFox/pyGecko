@@ -1,12 +1,12 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='pyGecko-WiiU',
-    version='1.0.0',
-    packages=[''],
+    name='pyGeckoWiiU',
+    version='1.0.1',
+    packages=find_packages(),
     url='https://github.com/RedSoloFox/pyGecko',
     license='MIT',
     author='redsolofox',
     author_email='RedSoloFox@gmail.com',
-    description='Python Library for use with tcpgecko on the Wii U'
+    description='Python Library for use with pygecko on the Wii U'
 )
